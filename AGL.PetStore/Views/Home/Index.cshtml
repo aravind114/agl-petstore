@@ -1,6 +1,11 @@
 ﻿@model  List<AGL.PetStore.ViewModels.PetsViewModel>
 
-
+@if(ViewData["Error"]!=null)
+{
+    <h2>Error in service!</h2>
+    <p>Details : @ViewData["Error"] </p>
+}
+else{
     <div class="text-center">
         <h1 class="display-5">AGL Pets Store - Cats</h1>
     </div>
@@ -37,3 +42,4 @@
             }
         </ul>
     </div>
+}
