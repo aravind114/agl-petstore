@@ -1,0 +1,39 @@
+﻿@model  List<AGL.PetStore.ViewModels.PetsViewModel>
+
+
+    <div class="text-center">
+        <h1 class="display-5">AGL Pets Store - Cats</h1>
+    </div>
+<div md-col-3>
+        <h3>
+            Male
+        </h3>
+        <ul>
+            @foreach (var pet in Model)
+            {
+                @if (pet.OwnersGender == GenderEnum.Male)
+                {
+                    <li>
+                        @pet.Name
+                    </li>
+                }
+
+            }
+        </ul>
+
+        <h3>
+            Female
+        </h3>
+        <ul>
+            @foreach (var pet in Model)
+            {
+                @if (pet.OwnersGender == GenderEnum.Female)
+                {
+                    <li>
+                        @pet.Name
+                    </li>
+                }
+
+            }
+        </ul>
+    </div>
